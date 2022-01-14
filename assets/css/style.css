@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+/* variables define */
+:root{
+    --primary-color: #fd8eaf;
+    --white-color: #fff;
+    --text-color: #9e9999;
+    --black-color: #000;
+}
+
+/* general css code */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+:active, :hover, :focus{
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--primary-color) !important;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+}
+
+/* custom scrollbar css code */
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--white-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+}
+
+/* custom css design code starting here */
+h1{
+    font-size: 6.25rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+h1 span{
+    color: var(--white-color);
+}
+h2{
+    font-weight: 700;
+    position: relative;
+    font-size: 2.1875rem;
+    text-transform: capitalize;
+    color: var(--black-color);
+    line-height: 3.7rem;
+}
+h2::before{
+    background-color: var(--primary-color);
+    border-radius: 0.3125rem;
+    -webkit-border-radius: 0.3125rem;
+    -moz-border-radius: 0.3125rem;
+    -ms-border-radius: 0.3125rem;
+    -o-border-radius: 0.3125rem;
+    content: '';
+    position: absolute;
+    top: -1.5625rem;
+    left: 0;
+    width: 1.875rem;
+    height: 0.3125rem;
+}
+h4{
+    color: var(--black-color);
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 0.9375rem;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+h5{
+    color: var(--black-color);
+    text-transform: capitalize;
+    font-family: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+p{
+    font-size: 1.125rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 0.0625px;
+}
+.main-btn{
+    width: 9.375rem;
+    height: 3.125rem;
+    border: 0.063rem solid var(--primary-color);
+    color: var(--black-color);
+    font-size: 1.125rem;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.main-btn::before, .main-btn::after{
+    position: absolute;
+    background-color: var(--white-color);
+    z-index: -1;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    content: '';
+}
+.main-btn::before{
+    height: 3.125rem;
+    width: 8.125rem;
+}
+.main-btn::after{
+    width: 9.375rem;
+    height: 1.875rem;
+}
+.main-btn:hover{
+    background-color: var(--black-color) !important;
+    color: var(--primary-color);
+}
+.main-btn:hover::before{
+    width: 0px;
+    background-color: var(--white-color);
+}
+.main-btn:hover::after{
+    height: 0px;
+    background-color: var(--white-color);
+}
+
+.wrapper{
+    padding: 5.25rem 0;
+}
+.text-content{
+    width: 60%;
+    margin: auto;
+}
+/* custom css design code end here */
+
+/* header section css code starting here */
+.header_wrapper .navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 100;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+}
+.header_wrapper .navigation-wrap .nav-item{
+    padding: 0 0.4rem;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+.header_wrapper .navbar-toggler:focus{
+    outline: none;
+    border: unset;
+    box-shadow: none;
+}
+.header_wrapper .navigation-wrap .nav-link{
+    padding-top: 0.9375rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--white-color);
+    letter-spacing: 0.0625rem;
+}
+.header_wrapper .navigation-wrap .nav-link:hover, .header_wrapper .navigation-wrap .nav-link.active{
+    color: var(--primary-color) !important;
+}
+.navigation-wrap .main-btn{
+    color: var(--white-color);
+    margin: auto;
+}
+.navigation-wrap .main-btn:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.navigation-wrap .main-btn::before, .navigation-wrap .main-btn::after{
+    background-color: transparent;
+}
+
+/* change navbar styling on scroll */
+.header_wrapper .navigation-wrap.scroll-on{
+    position: fixed;
+    background-color: var(--black-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.125rem 1.75rem 0 rgba(0,0,0,0.09);
+    transition: all 0.15s ease-in-out 0s;
+    -webkit-transition: all 0.15s ease-in-out 0s;
+    -moz-transition: all 0.15s ease-in-out 0s;
+    -ms-transition: all 0.15s ease-in-out 0s;
+    -o-transition: all 0.15s ease-in-out 0s;
+}
+.header_wrapper .navigation-wrap.scroll-on .nav-link:hover, .header_wrapper .navigation-wrap.scroll-on .nav-link.active{
+    color: var(--primary-color);
+}
+.header_wrapper .navigation-wrap.scroll-on .main-btn{
+    color: var(--white-color);
+    margin: auto;
+}
+.header_wrapper .navigation-wrap.scroll-on .main-btn:hover{
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.header_wrapper .navigation-wrap.scroll-on .main-btn::before, .header_wrapper .navigation-wrap.scroll-on .main-btn::after{
+    background-color: var(--black-color);
+}
+
+/* header section css code end here */
+
+/* banner section css code starting here */
+.hero_slide .carousel-caption{
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translate(-75%, -35%);
+    -webkit-transform: translate(-75%, -35%);
+    -moz-transform: translate(-75%, -35%);
+    -ms-transform: translate(-75%, -35%);
+    -o-transform: translate(-75%, -35%);
+    max-width: 1320px;
+}
+.hero_slide .carousel-caption h2{
+    color: var(--white-color);
+}
+.hero_slide .carousel-caption p{
+    color: var(--white-color);
+}
+/* banner section css code end here */
+
+/* about section css code starting here */
+.about-section .carousel-inner{
+    border-radius: 0 0 5rem;
+    -webkit-border-radius: 0 0 5rem;
+    -moz-border-radius: 0 0 5rem;
+    -ms-border-radius: 0 0 5rem;
+    -o-border-radius: 0 0 5rem;
+}
+.about-section .main-btn span, .style-section .main-btn span{
+    color: var(--black-color);
+}
+.about-section .carousel-indicators{
+    margin-bottom: -2.5rem;
+}
+.about-section .carousel-indicators [data-bs-target]{
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: var(--primary-color);
+}
+/* about section css code end here */
+
+/* features section css code starting here */
+.features .card{
+    cursor: pointer;
+}
+.features .card .icon{
+    box-shadow: 0.0625rem 0.25rem 1.25rem rgba(26 26 26 / 9%);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    padding: 1.25rem 0;
+    width: 5rem;
+    text-align: center;
+    height: auto;
+    margin-bottom: 2.5rem;
+    border-top-right-radius: 1.5625rem;
+}
+.features .card img{
+    display: block;
+    opacity: .75;
+    margin: 0 auto;
+    filter: brightness(0);
+    -webkit-filter: brightness(0);
+}
+.features .card:hover .icon img{
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+}
+.features .card:hover h4{
+    color: var(--primary-color);
+}
+/* features section css code end here */
+
+/* headphone section css code starting here */
+.choose h2::before, .contact-section h2::before{
+    left: 47%;
+}
+.choose .card .product-star{
+    color: var(--text-color);
+    font-size: 100%;
+}
+.choose .card a h4{
+    color: #1a1a1a;
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: 500;
+    margin: 0 0 0.93rem;
+    line-height: normal;
+}
+.choose .card:hover a h4{
+    color: var(--primary-color);
+}
+.choose .card .product-img{
+    width: 100%;
+    height: 21.125rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+.choose .card:hover .product-img{
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+#zoom-img{
+    background-image: url(../image/Product1.jpg);
+}
+#zoom-img-1{
+    background-image: url(../image/Product2.jpg);
+}
+#zoom-img-2{
+    background-image: url(../image/Product3.jpg);
+}
+/* headphone section css code end here */
+
+/* contact section css code starting here */
+form .form-group, form input[type=text]{
+    box-shadow: 0.0625rem 0.375rem 0.625rem 0.1875rem rgb(26 26 26 / 7%);
+    display: inline-block;
+    margin: 0 0.9375rem;
+    border-radius: 1.875rem;
+    -webkit-border-radius: 1.875rem;
+    -moz-border-radius: 1.875rem;
+    -ms-border-radius: 1.875rem;
+    -o-border-radius: 1.875rem;
+}
+form input[type=email], form input[type=text]{
+    display: inline-block;
+    padding: 0.1rem 1.5625rem;
+    height: 4.375rem;
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    margin-bottom: 0;
+    border-radius: 1.875rem;
+    -webkit-border-radius: 1.875rem;
+    -moz-border-radius: 1.875rem;
+    -ms-border-radius: 1.875rem;
+    -o-border-radius: 1.875rem;
+}
+form input[type=email], form input[type=text], form input[type=email], form .form-group{
+    background-color: var(--white-color);
+    color: var(--text-color);
+    border: 0.0725rem solid rgba(255,255,255,0.6);
+}
+.contact-section .subscribe{
+    float: right;
+    width: auto;
+    display: inline-block;
+    height: 3.75rem;
+    padding: 0.3125rem 0.3125rem 0.3125rem 1.5625rem;
+    border-radius: 1.875rem;
+    -webkit-border-radius: 1.875rem;
+    -moz-border-radius: 1.875rem;
+    -ms-border-radius: 1.875rem;
+    -o-border-radius: 1.875rem;
+    margin: 0.3125rem;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: 0.0625rem solid transparent;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.125rem;
+    outline: 0;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+.contact-section .subscribe i{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    margin-left: 0.3125rem;
+    text-align: center;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+/* contact section css code end here */
+
+/* footer section css code starting here */
+.footer{
+    background-color: var(--black-color);
+}
+.footer .footer-social a i{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+.footer .footer-social a:hover i{
+    color: var(--primary-color);
+}
+/* footer section css code end here */
+
+
+
+/* Responsive CSS code starting here */
+@media (max-width:1300px){
+    
+}
+
+@media (max-width:1230px){
+    /* custom css */
+    h1{
+        font-size: 5.25rem;
+    }
+    h2{
+        font-size: 2.375rem;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width:1024px){
+    /* custom css */
+    h1{
+        font-size: 3.25rem;
+    }
+    h2{
+        font-size: 1.375rem;
+        line-height: 1.8rem;
+    }
+    .wrapper{
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+}
+
+@media (max-width:991px){
+    /* custom classes */
+    h4, .choose .card a h4{
+        font-size: 0.9375rem;
+        margin-bottom: 0.625rem;
+    }
+    p{
+        font-size: 0.8125rem;
+        line-height: 1.3125rem;
+    }
+    .text-content{
+        width: 100%;
+    }
+
+    /* navbar */
+    .navigation-wrap .navbar-brand img{
+        height: 2.8125rem;
+    }
+    .navbar-toggler{
+        color: var(--text-color);
+    }
+    .navbar-toggler i{
+        color: var(--text-color);
+        line-height: 2;
+    }
+    .navigation-wrap{
+        text-align: center;
+        background-color: var(--black-color);
+    }
+    .navigation-wrap .nav-item .main-btn{
+        margin-top: 1rem;
+    }
+
+    /* banner */
+    #home{
+        padding: 4.375rem 0 0.375rem;
+    }
+    .hero_slide .carousel-caption{
+        transform: translate(-70%, -50%);
+        -webkit-transform: translate(-70%, -50%);
+        -moz-transform: translate(-70%, -50%);
+        -ms-transform: translate(-70%, -50%);
+        -o-transform: translate(-70%, -50%);
+    }
+    /* features */
+    .features .card .icon{
+        margin-bottom: 20px;
+    }
+
+    /* headphones */
+    #zoom-img, #zoom-img-1, #zoom-img-2{
+        height: 220px;
+    }
+
+    /* contact */
+    form input[type=text]{
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:767px){
+    /* custom css code */
+    .main-btn{
+        margin: auto;
+    }
+    .text-sec{
+        text-align: center;
+        padding-top: 1.875rem;
+    }
+    h2:before{
+        left: 45%;
+    }
+    /* banner */
+    .hero_slide .carousel-caption{
+        transform: translate(-45%, -70%);
+        -webkit-transform: translate(-45%, -70%);
+        -moz-transform: translate(-45%, -70%);
+        -ms-transform: translate(-45%, -70%);
+        -o-transform: translate(-45%, -70%);
+    }
+    .hero_slide .carousel-caption h2::before{
+        left: 0;
+    }
+
+    /* contact */
+    form input[type=email], form input[type=text], .subscribe{
+        padding: 0 0.625rem;
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    .subscribe{
+        font-size: 0.875rem;
+    }
+    form .form-group, form input[type=text]{
+        margin: 0;
+        width: 100%;
+    }
+    form .form-group{
+        white-space: nowrap;
+    }
+    form input[type=email]{
+        width: 50%;
+    }
+
+    /* footer */
+    .footer .footer-social a i{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:575px){
+    /* banner */
+    h1{
+        font-size: 1.6rem;
+    }
+    h2{
+        font-size: 1.25rem;
+        line-height: 1.7rem;
+        margin-bottom: 5px;
+    }
+    .about-section .carousel-inner .carousel-item img{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .about-section .carousel-inner{
+        border-radius: 0 0 2.5rem;
+        -webkit-border-radius: 0 0 2.5rem;
+        -moz-border-radius: 0 0 2.5rem;
+        -ms-border-radius: 0 0 2.5rem;
+        -o-border-radius: 0 0 2.5rem;
+    }
+
+    /* features */
+    .features .feature-img-box{
+        width: 65%;
+        margin: auto;
+    }
+}
+
+@media (max-width:430px){
+    /* custom css */
+    h2::before{
+        top: -0.8rem;
+    }
+
+    /* banner */
+    .hero_slide .carousel-caption p{
+        font-size: 0.7rem;
+        line-height: 1rem;
+        .hero_slide .carousel-caption
+    }
+    .hero_slide .carousel-caption h1{
+        font-size: 1rem;
+    }
+    .hero_slide .carousel-caption h2{
+        font-size: .8rem;
+    }
+
+    /* headphones */
+    #zoom-img, #zoom-img-1, #zoom-img-2{
+        height: 13.75rem;
+        width: 60%;
+        text-align: center;
+        margin: auto;
+    }
+}
+/* Responsive CSS code end here */
